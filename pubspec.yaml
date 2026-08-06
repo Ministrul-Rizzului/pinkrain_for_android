@@ -44,7 +44,7 @@ dependencies:
 
 dependency_overrides:
   intl: ^0.20.2
-  lucide_icons: ^0.350.0
+  lucide_icons: 0.257.0
 
 dev_dependencies:
   flutter_test:
