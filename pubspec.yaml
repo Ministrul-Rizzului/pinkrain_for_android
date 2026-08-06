@@ -26,7 +26,7 @@ dependencies:
   
   # Services & Hardware Integration
   cristalyse: ^1.17.6
-  tflite_flutter: ^0.14.0
+  tflite_flutter: ^0.12.1
   pdf: ^3.13.0
   share_plus: ^10.1.3
   flutter_local_notifications: ^18.0.1
@@ -69,3 +69,4 @@ flutter:
     - family: Outfit
       fonts:
         - asset: assets/fonts/Outfit.ttf
+        
