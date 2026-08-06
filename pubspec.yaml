@@ -38,13 +38,16 @@ dependencies:
   timezone: ^0.10.1
   package_info_plus: ^8.0.0
   
-  # Icon Design Packages
+  # Icon Design Packages (Upgraded HUX to remove lucide_icons)
   hugeicons: ^1.1.7
-  hux: ^0.25.0
+  hux: ^1.2.1
 
 dependency_overrides:
   intl: ^0.20.2
-  lucide_icons: 0.257.0
+  lucide_icons:
+    git:
+      url: https://github.com
+      path: .github/workflows
 
 dev_dependencies:
   flutter_test:
