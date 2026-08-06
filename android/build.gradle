@@ -4,7 +4,19 @@ allprojects {
         mavenCentral()
     }
     
-    // Forza la compatibilità con Java 17 su tutti i plugin (incluso tflite_flutter)
+    // Configura forzatamente le opzioni di compilazione Java su TUTTI i sottomoduli/plugin
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                compileOptions {
+                    sourceCompatibility = JavaVersion.VERSION_17
+                    targetCompatibility = JavaVersion.VERSION_17
+                }
+            }
+        }
+    }
+
+    // Forza la compatibilità JVM a livello 17 per tutti i task Kotlin di terze parti
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile.class).configureEach {
         compilerOptions {
             jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
